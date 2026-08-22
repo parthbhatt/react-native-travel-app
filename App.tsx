@@ -6,11 +6,13 @@
  */
 
 import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
+import { StatusBar, StyleSheet, Text, useColorScheme, View } from 'react-native';
 import {
   SafeAreaProvider,
+  SafeAreaView,
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
+import Home from './src/screens/Home';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -24,22 +26,37 @@ function App() {
 }
 
 function AppContent() {
-  const safeAreaInsets = useSafeAreaInsets();
+  //const safeAreaInsets = useSafeAreaInsets();
 
   return (
-    <View style={styles.container}>
-      <NewAppScreen
-        templateFileName="App.tsx"
-        safeAreaInsets={safeAreaInsets}
-      />
-    </View>
+    <Home />
+    // <SafeAreaView style={[styles.flex,styles.safeView]}>
+    //   <View style={styles.view}>
+    //     <Text style={styles.text}>Hello World</Text>
+    //   </View>
+    // </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  // container: {
+  //   flex: 1,
+  // },
+  flex: {
+    flex: 1
   },
+  safeView: {
+    // flex: 1,
+    //backgroundColor: 'red'
+  },
+  view: {
+    flex: 1,
+    backgroundColor: 'yellow',
+  },
+  text: {
+     flex: 1,
+     textAlign: 'center'
+  }
 });
 
 export default App;
