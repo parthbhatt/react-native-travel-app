@@ -5,12 +5,10 @@
  * @format
  */
 
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, Text, useColorScheme, View } from 'react-native';
+//import { StatusBar, StyleSheet, useColorScheme } from 'react-native';
+import { StatusBar, useColorScheme } from 'react-native';
 import {
   SafeAreaProvider,
-  SafeAreaView,
-  useSafeAreaInsets,
 } from 'react-native-safe-area-context';
 import Home from './src/screens/Home';
 
@@ -38,25 +36,25 @@ function AppContent() {
   );
 }
 
-const styles = StyleSheet.create({
-  // container: {
-  //   flex: 1,
-  // },
-  flex: {
-    flex: 1
-  },
-  safeView: {
-    // flex: 1,
-    //backgroundColor: 'red'
-  },
-  view: {
-    flex: 1,
-    backgroundColor: 'yellow',
-  },
-  text: {
-     flex: 1,
-     textAlign: 'center'
-  }
-});
+// const styles = StyleSheet.create({
+//   // container: {
+//   //   flex: 1,
+//   // },
+//   flex: {
+//     flex: 1
+//   },
+//   safeView: {
+//     // flex: 1,
+//     //backgroundColor: 'red'
+//   },
+//   view: {
+//     flex: 1,
+//     backgroundColor: 'yellow',
+//   },
+//   text: {
+//      flex: 1,
+//      textAlign: 'center'
+//   }
+// });
 
 export default App;
